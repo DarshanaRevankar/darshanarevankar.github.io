@@ -2588,7 +2588,7 @@ textarea.form-control {
     left:0%;
   }
   .timeline-certificate{
-    width: 90%;
+    width: 80%;
     left: 10%;
   }
   .timeline-item:nth-child(odd) .timeline-certificate{
