@@ -124,21 +124,23 @@ html, body {
   right: auto;
   top: 50%;
   left: 50%;
-  margin: 0 auto;
   width: 230px;
   height: 230px;
   background-color: #1995AD;
   border: 0;
+  background: url(../img/image1.jpeg) center no-repeat;
+  background-size: cover; /* Ensures the image covers the entire container */
   transform: translate(-50%, -50%) rotate(45deg);
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
   -moz-transform: translate(-50%, -50%) rotate(45deg);
   -o-transform: translate(-50%, -50%) rotate(45deg);
   -ms-transform: translate(-50%, -50%) rotate(45deg);
-  -webkit-box-shadow: 10px 10px 0px 0px #dddddd;
-  -o-box-shadow: 10px 10px 0px 0px #dddddd;
-  -moz-box-shadow: 10px 10px 0px 0px #dddddd;
-  box-shadow: 10px 10px 0px 0px #dddddd;
+  -webkit-box-shadow: 10px 10px 0px 0px #759393;
+  -o-box-shadow: 10px 10px 0px 0px #759393;
+  -moz-box-shadow: 10px 10px 0px 0px #759393;
+  box-shadow: 10px 10px 0px 0px #759393;
 }
+
 
 .medium-rectangle {
   width: 100px;
