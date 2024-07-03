@@ -476,6 +476,16 @@ html, body {
   align-items: center;
 }
 
+.background-overlay:before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
 .hero-content {
   color: #ffffff;
@@ -631,7 +641,8 @@ html, body {
  * Sections
  */
 .site-section {
-  padding: 100px 0;
+  padding-top: 80px 0;
+  padding: 20px 0;
 }
 
 .site-section h2 {
@@ -1315,8 +1326,7 @@ html, body {
 }
 
 .site-section.section-reviews .blue-bg {
-  margin-top: 50px;
-  padding: 70px 0px;
+  padding: 50px 0px;
 }
 
 .review-carousel {
@@ -1363,7 +1373,6 @@ html, body {
 }
 
 .review p {
-  margin: 45px auto 0;
   color: #ffffff;
   max-width: 1000px;
   overflow-x: hidden;
@@ -2080,6 +2089,14 @@ html, body {
   text-align: center;
 }
 
+.section-background1 {
+  position: relative;
+  background-size: cover;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+}
+
 .section-background p {
   position: relative;
   margin: 10px 0 0;
@@ -2094,6 +2111,10 @@ html, body {
 /* Sections background: Quote */
 .section-quote {
   background: url(../img/436d56f2-5495-41d9-90ba-ca65026b205c.jpg) center no-repeat fixed;
+}
+
+.section-quote1 {
+  background: url(../img/introimage2.jpeg) center no-repeat fixed;
 }
 
 .section-quote p {
@@ -2160,6 +2181,12 @@ html, body {
     padding: 100px 0;
   }
   .section-background .btn {
+    margin-top: 30px;
+  }
+  .section-background1 {
+    padding: 0 0;
+  }
+  .section-background1 .btn {
     margin-top: 30px;
   }
   .section-quote p {
@@ -2593,5 +2620,60 @@ textarea.form-control {
   }
   .timeline-item:nth-child(odd) .timeline-certificate{
     left:10%
+  }
+}
+
+.review-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between each review */
+}
+
+.review {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.review-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically centered */
+  gap: 20px; /* Space between image and text */
+}
+
+.image-container {
+  flex: 1 1 auto;
+  max-width: 450px; /* Adjust the max-width of the image */
+  max-height: 450px; /* Adjust the max-height of the image */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fits within the container */
+  border-radius: 5px; /* Optional: add some rounding to the corners */
+}
+
+.text-container {
+  flex: 2 1 auto;
+}
+
+.review-author {
+  margin-top: 10px; /* Space between text and author information */
+}
+
+@media (max-width: 768px) {
+  .review-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-container {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  .text-container {
+    width: 100%;
   }
 }

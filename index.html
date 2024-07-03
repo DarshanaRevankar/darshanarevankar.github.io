@@ -98,7 +98,7 @@
                 <div style="margin-top: 50px;z-index:9999">
                     <h1>I am Darshana Revankar</h1>
                     <p class="hero-job"><span>I specialize in Business and Technology Operations</span></p>
-                    <p class="hero-job-desc"> I STAND ON A SWEET SPOT WHERE technology &amp; business INTERSECTS. </p>
+                    <p class="hero-job-desc"> I STAND ON A SWEET SPOT WHERE technology &amp; business INTERSECTS </p>
                 </div>
             </div><!-- /.hero-content -->
 
@@ -171,10 +171,28 @@
                     </div>
                 </div>
             </div>
-        </section><!-- /.section-hello -->
-        <!-- End Hello section -->
-
-        <!-- Quote section -->
+            <section class="site-section section-reviews text-center">
+                <!-- <div class="container" style="background-color: #a1d2e6;">
+                    <p style="text-align: left;color: white;">
+                     </h3></p>
+                </div> -->
+                <section class="section-background section-quote1 background-overlay text-center">
+                    <div class="container">
+                        <p style="font-size: 20px;"> As an experienced professional in operations and agile project management, I specialize in creating streamlined processes and efficient workflows that drive success in diverse teams. My portfolio showcases a range of projects that highlight my skills in strategic planning, data-driven decision-making, tool integrations, and CRM implementation. Below is a sneak peak of my work, providing an overview of my creative process and professional journey.
+                        </p>
+                    </div>
+                </section>
+                <div class="blue-bg">
+                    <div class="container">
+                        <div class="review-carousel" id="reviewCarouel">
+    
+    
+                        </div><!-- /.review-carousel -->
+                    </div>
+                </div>
+    
+            </section>
+        </section>
         <section class="section-background section-quote background-overlay text-center">
             <div class="container">
                 <p>Experienced in delivering <span>high-impact projects</span> on time and within budget while fostering
@@ -332,7 +350,7 @@
                 </div>
                 <!-- <p class="section-subtitle"><span>OUR CLIENTS LOVE US! READ WHAT THEY HAVE TO SAY</span></p> -->
             </div>
- 
+
             <div>
                 <div class="container" style="margin-bottom: 20px;margin-top: 20px;">
                     <div class="row">
@@ -690,11 +708,112 @@
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
     <script>
-        $(document).ready(function () {
-            const projects = [{
-                "imgPath": './assets/img/project1.jpeg',
-                "projectTitle": "SABRE Business Simulation",
-                "description": `During the SABRE simulation project, I engaged in multiple strategic business maneuvers to strengthen our market position and diversify our product offerings.
+        const mywork = [{
+            imgPath: './assets/img/mywork1.png',
+            title: 'Objectives and Key Results (OKR) Framework',
+            description: `Objective:
+The objective was to implement an OKR framework to align departmental goals with company objectives.
+
+Details:
+The framework linked objectives to key results, which were broken down into stories and tasks. It provided a structured approach to tracking progress and managing priorities.
+
+Impact:
+This implementation resulted in better alignment of team efforts with strategic goals, leading to higher productivity and the achievement of key results.`
+        }, {
+            title: 'Software Development Lifecycle',
+            imgPath: './assets/img/mywork2.png',
+            description: `
+                Objective:
+                The objective was to define and document the software development lifecycle from backlog to production.
+
+                Details:
+                The process included stages such as Implementation, Code Review, QA Testing, and Production. It emphasized the use of GitLab for task management and Cloudflare for deployment, with clearly defined roles and approval steps.
+
+                Impact:
+                This initiative led to enhanced clarity and consistency in the development process, resulting in higher quality releases.`
+        },
+        {
+            title: 'Detailed Lifecycle Metrics Analysis',
+            imgPath: './assets/img/mywork3.png',
+            description: `
+Objective:
+The objective was to provide an in-depth analysis of software development lifecycle metrics to identify trends and areas for improvement.
+
+Details:
+This detailed dashboard included metrics such as lead time, cycle time, new issues, and deploys, with a comprehensive breakdown of total time across different stages like planning, implementation, code review, and testing.
+
+Impact:
+The project resulted in greater insight into development cycles, enabling more informed decision-making and targeted process enhancements.`
+        }, {
+            title: 'Invoice Tracking and Expense Management',
+            imgPath: './assets/img/mywork4.png',
+            description: `
+Objective:
+The objective was to automate the invoice tracking and expense management process.
+
+Details:
+The workflow included registering AMEX cards in Expensify, entering invoices biweekly, and automating invoice grouping. It ensured all receipts were properly tracked and reconciled with QuickBooks.
+
+Impact:
+This automation resulted in increased accuracy and efficiency in expense management, reducing manual work and potential errors.`
+        }, {
+            title: 'Purchase Order Request Workflow',
+            
+            imgPath: './assets/img/mywork5.png',
+            description: `
+Objective:
+The objective was to automate and streamline the purchase order request process for better accuracy and efficiency.
+
+Details:
+The workflow outlined the steps from filling out an order request form to approval or denial by relevant approvers. Approved tasks were moved to an "In Progress" list, with sub-tasks created and assigned to the requester for the next steps.
+
+Impact:
+This process resulted in reduced manual errors and improved turnaround time for purchase orders.`
+        },
+        {
+            title: 'Teams and Chat Group Integration',
+            imgPath: './assets/img/mywork6.png',
+            description: `
+Objective:
+The objective was to streamline communication between chat groups and Teams channels for better collaboration.
+
+Details:
+The diagram illustrates the flow of information for urgent issues, brainstorming, file storage, and app notifications, highlighting roles in daily updates, approvals, and social interactions.
+
+Impact:
+This project improved team communication and collaboration, leading to more efficient execution.`
+        },
+        {
+            title: 'Dashboard Overview',
+            imgPath: './assets/img/mywork7.png',
+            description: `
+Objective:
+The objective was to create and manage various dashboards for different aspects of project management.
+
+Details:
+The dashboards included OKRs/KPIs, release checklists, sprint reports, QA metrics, design progress, and engineering updates. Each dashboard provided a clear overview of the relevant metrics and statuses.
+
+Impact:
+This initiative resulted in enhanced visibility into project progress and performance, enabling better decision-making and resource management.`
+        },
+        {
+            title: 'Sales Pipeline Workflow',
+            imgPath: './assets/img/mywork8.png',
+            description: `
+Objective:
+The objective was to design a comprehensive sales pipeline to manage leads from initial contact to closure.
+
+Details:
+The pipeline was set up in HubSpot with workflows and automations, along with an accurate dashboard to manage the stages of the sales process and ensure smooth progression.
+
+Impact:
+This project streamlined the sales process, leading to improved sales cycle efficiency.`
+        }
+        ]
+        const projects = [{
+            "imgPath": './assets/img/project1.jpeg',
+            "projectTitle": "SABRE Business Simulation",
+            "description": `During the SABRE simulation project, I engaged in multiple strategic business maneuvers to strengthen our market position and diversify our product offerings.
     
     Key strategies included:
     • Investing to Grow: We adopted an offensive strategy to enhance our market presence for a new product named 'Blaze' by increasing investment in marketing and sales resources.
@@ -706,35 +825,36 @@
     Throughout the SABRE simulation, I emphasized the fundamentals of maintaining product quality and ensuring strong market perception to drive purchase intentions and increase market share.
     
     Additionally, I analyzed performance situations, identified key reasons for outcomes, and made strategic decisions based on various studies and reports, such as competitive sales force estimates, advertising estimates, market share by segment, and product attribute perceptions. This comprehensive approach allowed for informed decision-making and strategic resource allocation, leading to effective marketing and production strategies.`
-            }, {
-                "imgPath": './assets/img/project2.jpeg',
-                "projectTitle": "Leadership Perspectives",
-                "description": `The project demanded showcasing different perspectives of the C-Suite leaders for an assumed company (Healthcare). I worked on the role of COO and put together a framework considering company's vision and strategy. 
+        }, {
+            "imgPath": './assets/img/project2.jpeg',
+            "projectTitle": "Leadership Perspectives",
+            "description": `The project demanded showcasing different perspectives of the C-Suite leaders for an assumed company (Healthcare). I worked on the role of COO and put together a framework considering company's vision and strategy. 
     Project covered: The difference between management and leadership; the role of experience; effective use of power and influence; leader traits and characteristics; and the situational factors leaders must assess in facilitating group effectiveness and team building.`
-            }, {
-                "imgPath": './assets/img/project3.jpeg',
-                projectTitle: "Project X - Engineering Project Management",
-                description: `Our integrated project team (IPT) was assembled to support project X to design and manufacture a new air data sensor. The IPT was tasked with managing the project to ensure that it is done within budget and that all deadlines are met. The team did so by creating a macro-plan level schedule to understand how long the project will take and if changes need to be made in order to meet all deadlines. A budget plan was created and all expenses were calculated to project the cost of the project as well as the earnings upon completion. In addition to the budget and schedule, the team performed a risk assessment for the project to understand what the most important risks are and to have a plan to mitigate them. All of this was to be done while trying to meet the improvement targets for the year. The goal was to reduce the cost of expenses for the project while increasing productivity. The company hopes to complete the new project with cost forecast, scheduling, performance, and product readiness within a year.`
-            }, {
-                "imgPath": './assets/img/project4.jpeg',
-                "projectTitle": "Case Study - Operations - Biofourmis",
-                "description": `• Case study on product & service based health care company - Biofourmis
+        }, {
+            "imgPath": './assets/img/project3.jpeg',
+            projectTitle: "Project X - Engineering Project Management",
+            description: `Our integrated project team (IPT) was assembled to support project X to design and manufacture a new air data sensor. The IPT was tasked with managing the project to ensure that it is done within budget and that all deadlines are met. The team did so by creating a macro-plan level schedule to understand how long the project will take and if changes need to be made in order to meet all deadlines. A budget plan was created and all expenses were calculated to project the cost of the project as well as the earnings upon completion. In addition to the budget and schedule, the team performed a risk assessment for the project to understand what the most important risks are and to have a plan to mitigate them. All of this was to be done while trying to meet the improvement targets for the year. The goal was to reduce the cost of expenses for the project while increasing productivity. The company hopes to complete the new project with cost forecast, scheduling, performance, and product readiness within a year.`
+        }, {
+            "imgPath": './assets/img/project4.jpeg',
+            "projectTitle": "Case Study - Operations - Biofourmis",
+            "description": `• Case study on product & service based health care company - Biofourmis
     • Studied organizational structure, functional process, product & productivity. 
     • Conducted SWOT Analysis and analyzed the data. 
     • Researched Quality Assurance - Structure Process and outcome measures.
     • Investigated COVID Impact on Biofourmis
     • Examined and Identified Success Metrics`
-            }, {
-                "imgPath": './assets/img/project5.jpeg',
-                "projectTitle": "Marketing strategy - Accentuate",
-                "description": `The plan outlines Accentuate, a tech-driven platform for facilitating export and import activities. It allows customers to begin exporting goods with appropriate packaging and financial support through a partnership with a bank at the initial stage of export.
+        }, {
+            "imgPath": './assets/img/project5.jpeg',
+            "projectTitle": "Marketing strategy - Accentuate",
+            "description": `The plan outlines Accentuate, a tech-driven platform for facilitating export and import activities. It allows customers to begin exporting goods with appropriate packaging and financial support through a partnership with a bank at the initial stage of export.
     • Researched about strongest product competitors, their strengths & weaknesses
     • Conducted SWOT Analysis
     • Created a Marketing Plan to maintain & increase sales closure to achieve revenue goals. Proposed Marketing Mix.
     • Successful implementation of a public relations strategy was a crucial component of Accentuate’s marketing plan.
     • Setting Success metrics`
-            }];
-    
+        }];
+        $(document).ready(function () {
+
             projects.forEach((val, idx) => {
                 const id = `project${idx}`;
                 $('#grid').append(` <!-- Portfolio item -->
@@ -763,10 +883,27 @@
                         </div>
                     </div>`);
             });
-            console.log("ready!");
+            mywork.map(val => {
+            $('#reviewCarouel').append(` <div class="review">
+                      <div class="review-content">
+                        <div class="image-container">
+                          <img src="${val.imgPath}" class="img-res" alt="">
+                        </div>
+                        <div class="text-container">
+                          <h4 style="color:white" style="text-align:center">${val.title}</h4>
+                          <p style="text-align: justify;">${val.description.split("\n").join("<br>")}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+            `)
+        })
         });
+
+
+   
     </script>
-    
+
 </body>
 
 </html>
