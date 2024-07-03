@@ -98,7 +98,10 @@
         </div>
     </div>
 
-
+    <div id="customImageModal" class="custom-modal">
+        <span class="custom-close">&times;</span>
+        <img class="custom-modal-content" id="customModalImage">
+    </div>
 
     <!-- Main content -->
     <main id="main" class="site-main">
@@ -161,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
         <section class="site-section section-reviews text-center" id="works">
             <!-- <div class="container" style="background-color: #a1d2e6;">
@@ -170,7 +173,12 @@
             </div> -->
             <section class="section-background section-quote1 background-overlay text-center">
                 <div class="container">
-                    <p style="font-size: 20px;"> As an experienced professional in operations and agile project management, I specialize in creating streamlined processes and efficient workflows that drive success in diverse teams. My portfolio showcases a range of projects that highlight my skills in strategic planning, data-driven decision-making, tool integrations, and CRM implementation. Below is a sneak peak of my work, providing an overview of my creative process and professional journey.
+                    <p style="font-size: 20px;"> As an experienced professional in operations and agile project
+                        management, I specialize in creating streamlined processes and efficient workflows that drive
+                        success in diverse teams. My portfolio showcases a range of projects that highlight my skills in
+                        strategic planning, data-driven decision-making, tool integrations, and CRM implementation.
+                        Below is a sneak peak of my work, providing an overview of my creative process and professional
+                        journey.
                     </p>
                 </div>
             </section>
@@ -249,7 +257,7 @@
                 </div>
             </div>
         </section>
-     
+
         <hr>
 
         <section class="site-section  section-about section-counters text-center" style="padding:50px">
@@ -426,13 +434,13 @@
             </div>
         </section>
         <hr>
-       
+
         <section class="site-section section-works" id="project">
             <div class="container">
                 <h2>PROJECTS</h2>
 
                 <div class="portfolio">
-                   
+
                     <div id="grid" style="overflow: visible;">
 
                     </div>
@@ -535,11 +543,11 @@
         </section>
         <section class="section-background section-twitter background-overlay text-center" id="contact">
             <div class="container">
-              <div class="rectangle"><i class="fa fa-envelope"></i></div>
-              <p>Contact Me</p>
-              <p>connectdarshana@gmail.com</p>
-          </section>
-        
+                <div class="rectangle"><i class="fa fa-envelope"></i></div>
+                <p>Contact Me</p>
+                <p>connectdarshana@gmail.com</p>
+        </section>
+
         <section class="section-networks blue-bg">
             <div class="container">
                 <a href="#" class="rectangle">
@@ -557,7 +565,7 @@
         <!-- End Social Networks section -->
 
     </main><!-- /#main -->
-  
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -639,7 +647,7 @@ Impact:
 This automation resulted in increased accuracy and efficiency in expense management, reducing manual work and potential errors.`
         }, {
             title: 'Purchase Order Request Workflow',
-            
+
             imgPath: './assets/img/mywork5.png',
             description: `
 Objective:
@@ -765,10 +773,11 @@ This project streamlined the sales process, leading to improved sales cycle effi
                     </div>`);
             });
             mywork.map(val => {
-            $('#reviewCarouel').append(` <div class="review">
+                $('#reviewCarouel').append(` <div class="review">
                       <div class="review-content">
                         <div class="image-container">
                           <img src="${val.imgPath}" class="img-res" alt="">
+                          <div class="zoom-icon">&#128269;</div>
                         </div>
                         <div class="text-container">
                           <h4 style="color:white" style="text-align:center">${val.title}</h4>
@@ -778,11 +787,36 @@ This project streamlined the sales process, leading to improved sales cycle effi
                     </div>
                     <hr>
             `)
-        })
+            })
+
+            // Get the modal
+            var customModal = $("#customImageModal");
+
+            // Get the image and insert it inside the modal - use its "src" as a source for the modal image
+            var customModalImg = $("#customModalImage");
+
+            // Add click event to all images in the reviews
+            $('.image-container img').on('click', function () {
+                customModal.show();
+                customModalImg.attr('src', $(this).attr('src'));
+            });
+
+            // Get the <span> element that closes the modal
+            var customSpan = $(".custom-close");
+
+            // When the user clicks on <span> (x), close the modal
+            customSpan.on('click', function () {
+                customModal.hide();
+            });
+
+            // When the user clicks anywhere outside of the modal, close it
+            $(window).on('click', function (event) {
+                if ($(event.target).is(customModal)) {
+                    customModal.hide();
+                }
+            });
         });
 
-
-   
     </script>
 
 </body>

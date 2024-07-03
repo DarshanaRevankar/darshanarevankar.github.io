@@ -2670,3 +2670,79 @@ textarea.form-control {
 .contact a:hover {
   text-decoration: underline; /* Add underline on hover */
 }
+/* Custom Modal (background) */
+.custom-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 90px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Custom Modal Content (image) */
+.custom-modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.custom-modal-content {
+  animation-name: custom-zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes custom-zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.custom-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.custom-close:hover,
+.custom-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Image container styles */
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Ensure the zoom icon doesn't overflow */
+}
+
+.img-res {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Zoom icon styles */
+.zoom-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  opacity: 1; /* Always visible */
+  pointer-events: none; /* Prevent the icon from blocking clicks on the image */
+}
