@@ -262,7 +262,7 @@ html, body {
 }
 
 .social-icons.small .rectangle:hover i {
-  color: #196fc0;
+  color: #1995AD;
 }
 
 .social-icons .rectangle {
@@ -416,7 +416,7 @@ html, body {
   }
   .site-navigation .navbar-collapse {
     position: relative;
-    background-color: #196fc0;
+    background-color: #1995AD;
     z-index: 99;
     text-align: center;
     border-top: 0;
@@ -641,8 +641,7 @@ html, body {
  * Sections
  */
 .site-section {
-  padding-top: 80px 0;
-  padding: 20px 0;
+  padding: 100px 0;
 }
 
 .site-section h2 {
@@ -1933,20 +1932,6 @@ html, body {
   height: 250px;
 }
 
-.portfolio-item .portfolio-item-thumb:after {
-  content: '';
-  background-color: #1995AD;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  -webkit-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
 
 .portfolio-item .portfolio-item-thumb .rectangle {
   position: absolute;
@@ -2676,4 +2661,12 @@ textarea.form-control {
   .text-container {
     width: 100%;
   }
+}
+.contact a {
+  color: #ffffff !important; /* Force the color to white */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
